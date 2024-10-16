@@ -1,8 +1,14 @@
+import type {Metadata} from 'next'
 
+
+export const metadata: Metadata = {
+ title:"Lavakumar",
+ description:"Lavakumar is an MERN stack developer"
+}
 
 function about() {
   return (
-    <div>about</div>
+    <div>Hi I am Lavakumar , How are you ?</div>
   )
 }
 
