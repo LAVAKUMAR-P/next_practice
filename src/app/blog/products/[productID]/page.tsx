@@ -6,12 +6,19 @@ interface data {
   }
 }
 
-export const generateMetadata = ({params} : data): Metadata =>{
-  return{
-    title:`Product ${params.productID}`,
-    description:`Product ${params.productID}`
-  }
-}
+export const generateMetadata = async ({
+  params,
+}: data): Promise<Metadata> => {
+  const { productID } = params;
+  const title = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(productID);
+    }, 100);
+  });
+  return {
+    title: `Product ${title}`,
+  };
+};
 function page({params}:data) {
   //  let {productID} = useParams()
   return (
