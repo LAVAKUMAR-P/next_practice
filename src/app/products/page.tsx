@@ -2,7 +2,7 @@
 
 function page() {
   return (
-    <div>product page</div>
+    <div>product Data page</div>
   )
 }
 
