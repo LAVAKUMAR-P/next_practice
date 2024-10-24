@@ -1,7 +1,8 @@
 import React from 'react'
+type productData = string|number
 interface data {
     params : {
-        productID : string|number,
+        productID : productData,
         reviewID: string,
     }
 }
